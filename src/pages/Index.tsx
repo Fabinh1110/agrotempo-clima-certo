@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { 
   Cloud, 
@@ -21,8 +22,10 @@ import {
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { useNavigate } from 'react-router-dom';
 
 const Index = () => {
+  const navigate = useNavigate();
   const [currentTime, setCurrentTime] = useState(new Date());
   const [weatherData, setWeatherData] = useState({
     temperature: 18,
@@ -211,6 +214,17 @@ const Index = () => {
                 </CardContent>
               </Card>
             ))}
+          </div>
+
+          <div className="text-center mt-12">
+            <Button 
+              onClick={() => navigate('/app')}
+              size="lg" 
+              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg rounded-full"
+            >
+              <Smartphone className="h-6 w-6 mr-2" />
+              Testar App AgroTempo
+            </Button>
           </div>
         </div>
       </section>
