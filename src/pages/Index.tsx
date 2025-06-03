@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { 
   Cloud, 
@@ -222,8 +221,7 @@ const Index = () => {
               size="lg" 
               className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg rounded-full"
             >
-              <Smartphone className="h-6 w-6 mr-2" />
-              Testar App AgroTempo
+              App Intuitivo
             </Button>
           </div>
         </div>
