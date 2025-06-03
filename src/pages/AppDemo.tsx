@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { 
   ArrowLeft,
@@ -96,7 +95,7 @@ const AppDemo = () => {
         {/* Localização */}
         <div className="flex items-center justify-center text-gray-600 mb-4">
           <MapPin className="h-4 w-4 mr-2" />
-          <span>Guarapuava, PR - Fazenda São João</span>
+          <span>Guarapuava, PR - Fazenda AgroTempo</span>
         </div>
 
         {/* Dados Atuais */}
