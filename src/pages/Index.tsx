@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { 
   Cloud, 
@@ -26,19 +25,19 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 const Index = () => {
   const [currentTime, setCurrentTime] = useState(new Date());
   const [weatherData, setWeatherData] = useState({
-    temperature: 24,
-    humidity: 68,
-    windSpeed: 12,
-    rainfall: 0
+    temperature: 18,
+    humidity: 72,
+    windSpeed: 8,
+    rainfall: 0.2
   });
 
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentTime(new Date());
-      // Simular mudanças nos dados meteorológicos
+      // Simular mudanças nos dados meteorológicos adaptados para Guarapuava
       setWeatherData(prev => ({
         temperature: Math.round(prev.temperature + (Math.random() - 0.5) * 0.5),
-        humidity: Math.max(30, Math.min(100, prev.humidity + (Math.random() - 0.5) * 2)),
+        humidity: Math.max(40, Math.min(95, prev.humidity + (Math.random() - 0.5) * 2)),
         windSpeed: Math.max(0, prev.windSpeed + (Math.random() - 0.5) * 2),
         rainfall: Math.max(0, prev.rainfall + (Math.random() - 0.8) * 0.1)
       }));
@@ -254,7 +253,7 @@ const Index = () => {
 
           <div className="bg-green-50 border border-green-200 rounded-xl p-8">
             <h3 className="text-2xl font-bold text-green-800 mb-6 text-center">
-              Testado por produtores em Minas Gerais
+              Testado por produtores na região de Guarapuava
             </h3>
             <div className="grid md:grid-cols-3 gap-6">
               {[
@@ -313,7 +312,7 @@ const Index = () => {
             <div className="grid md:grid-cols-2 gap-8">
               <div className="text-center">
                 <div className="text-4xl font-bold text-blue-600 mb-2">50</div>
-                <p className="text-lg text-gray-600">Piloto com unidades no Sul do país</p>
+                <p className="text-lg text-gray-600">Piloto com unidades na região Sul do país</p>
               </div>
               <div className="text-center">
                 <TrendingUp className="h-12 w-12 mx-auto mb-2 text-green-600" />
@@ -355,13 +354,13 @@ const Index = () => {
               {
                 icon: <Phone className="h-8 w-8 text-blue-600" />,
                 title: 'Telefone',
-                content: '(31) 9 9999-9999',
-                link: 'tel:+5531999999999'
+                content: '(42) 9 9999-9999',
+                link: 'tel:+5542999999999'
               },
               {
                 icon: <MapPin className="h-8 w-8 text-red-600" />,
                 title: 'Localização',
-                content: 'Belo Horizonte – MG',
+                content: 'Guarapuava – PR',
                 link: '#'
               }
             ].map((contact, index) => (
